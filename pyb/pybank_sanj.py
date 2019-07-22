@@ -1,14 +1,10 @@
 import os
 import csv
-csvpath = os.path.join('python2nd','resources','budget_data.csv')
-with open(csvpath, newline='') as csvfile:
-
-    # CSV reader specifies delimiter and variable that holds contents
-    csvreader = csv.reader(csvfile, delimiter=',')
-
+csv_file = os.path.join(".", "resources", "budget_data.csv")
+with open(csv_file, newline="") as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
     print(csvreader)
-
-
-   
+    for row in csvreader:
+        print(row)
 
 

@@ -1,10 +1,18 @@
 import os
 import csv
-csv_file = os.path.join(".", "resources", "budget_data.csv")
-with open(csv_file, newline="") as csvfile:
+budget_csv = os.path.join(".", "Resources", "budget_data.csv")
+ 
+# Open and read csv
+with open(budget_csv, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
-    print(csvreader)
+    # number of months
+    
     for row in csvreader:
-        print(row)
+        print(row[0])
+
+
+
+        
+
 
 
